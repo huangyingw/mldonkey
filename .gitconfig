@@ -1,0 +1,21 @@
+[remote "ygrek"]
+    url = git@github.com:ygrek/mldonkey.git
+    fetch = +refs/heads/*:refs/remotes/ygrek/*
+[remote "github"]
+    url = git@github.com:huangyingw/mldonkey.git
+    fetch = +refs/heads/*:refs/remotes/github/*
+[push]
+    remote = github
+[gsync]
+    remote = ygrek
+    branch = master
+[merge]
+	allow = true
+[branch "dev"]
+    remote = github
+    merge = refs/heads/dev
+[branch "master"]
+    remote = ygrek
+    merge = refs/heads/master
+[commit]
+	message = n
